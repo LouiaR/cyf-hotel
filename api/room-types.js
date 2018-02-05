@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/services", (req, res) => {
   // TODO return DB row here
   res.status(200).json({
     roomtypes: [
@@ -14,5 +14,6 @@ router.get("/", (req, res) => {
     ]
   });
 });
+
 
 module.exports = router;

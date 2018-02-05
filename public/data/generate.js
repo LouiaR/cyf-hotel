@@ -73,5 +73,3 @@ for (let i = 0; i < numRecords; i += 1) {
   };
   data.invoices.push(invoiceRecord);
 }
-
-writeData();

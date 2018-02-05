@@ -1,0 +1,46 @@
+[
+  {
+    "image": "https://www.ahstatic.com/photos/2185_roqeb_00_p_1024x768.jpg",
+    "id": 20,
+    "type of room": "CLASSIC ROOM",
+    "description": "350 sq ft / 32.5 m². Flatscreen TV, Bose radio, feather SoBed, 2 phone lines, safe, minibar, iron, marble bath, hairdryer, separate bath & shower,complimentary WIFI, Rolloway not allowed.\r\nSleek, stylish, and refreshing. Our spacious Deluxe Room guest rooms feature premium Italian walnut furnishings contrasted against a light coloured room palette and plush carpeting. Additional closet space and larger work desks cater to leisure and business travellers alike. Deep soaking tubs, and separate, glass-enclosed rain showers offer welcome spaces to unwind. \r\n",
+    "price": 50
+  },
+  {
+    "image": "https://ritzcarlton-h.assetsadobe.com/is/image/content/dam/the-ritz-carlton/hotels/usa-and-canada/california/san-francisco/guest-rooms/RCSANFR_00429.png?$XlargeViewport100pct$",
+    "id": 14,
+    "type of room": "SUPERIOR CITY VIEW ROOM",
+    "description": "A tranquil haven in mid-city. Decorated in soft neutral shades, the room’s sophisticated colour scheme is complemented by Italian walnut finishes. Each includes a luxurious King bed and large marble-clad bathroom. Every room is accented by large windows that drench the room in natural light, creating an inviting residentially-inspired space. ",
+    "price": 80
+  },
+  {
+    "image": "https://ritzcarlton-h.assetsadobe.com/is/image/content/dam/the-ritz-carlton/hotels/asia-pacific/malaysia/kuala-lumpur/guest-rooms/RCKUALA_00122.png?$XlargeViewport100pct$",
+    "id": 18,
+    "type of room": "SUPERIOR ROOM",
+    "description": "A pocket of privacy in the bustling Big Apple. Each room decorated in tranquil shades of beige, accentuated by warm Italian walnut. Each with a luxurious marble-clad bathroom and rainfall shower. With views overlooking the courtyard below, our Superior Rooms are ample spaces to sleep, relax, and work.  King and Twin bed options are also available, along with the option of connecting rooms for larger groups. ",
+    "price": 75
+  },
+  {
+    "image": "http://indulgemagazine.net/wp-content/uploads/2017/11/food.jpg",
+    "id": 0,
+    "type of room": "Smart Dinner",
+    "description": "Eat",
+    "price": 0
+  },
+  {
+    "image": "http://www.beautiful-views.net/views/summer-holiday-color-cocktails-fruit.jpg",
+    "id": 0,
+    "type of room": "Winter Cocktails",
+    "description": "Drink",
+    "price": 0
+  }
+  ,
+
+  {
+    "image": "https://www.silverlandhotels.com/uploads/slide/2016-12-16-15-12-32-newwebsite-hotel-bigbanner_spapackage.jpg",
+    "id": 0,
+    "type of room": "Beauty & Relax",
+    "description": "Relax",
+    "price": 0
+  }
+]

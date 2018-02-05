@@ -1,9 +1,21 @@
 const express = require("express");
 const router = express.Router();
-
+const reservations = require('../public/data/reservations.json');
 router.post("/reservations", (req, res) => {
   // TODO read req.body.reservation, look up price by room id and insert reservation into DB
   res.status(200).json(req.body.reservation);
+});
+
+router.get('/:id?', (req, res) => {
+  if (req.params.id){
+    res.status(200).json({
+      reservations: reservations.filter(reservation => reservation.id === parseInt(req.params.id))
+    });
+  }else {
+    res.status(200).json({
+      reservations
+    });
+  }
 });
 
 router.get("/reservations", (req, res) => {

@@ -1,57 +1,324 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 .site-header {
-  background-color: rgba(0, 0, 0, 0.85);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-  margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    margin-bottom: 10px;
 }
 
 .site-header a {
-  color: #999;
-  transition: ease-in-out color 0.15s;
+    color: #999;
+    transition: ease-in-out color 0.15s;
 }
 
 .site-header a:hover {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 .results {
-  padding-top: 15px;
+    padding-top: 15px;
+}
+
+
+/* -----------------------------
+        customer room 
+-----------------------------------*/
+
+.room {
+    background: rgba(249, 249, 249, 0.36);
+}
+
+.room-heading,
+.title {
+    text-align: center;
+}
+
+.room-heading {
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.room-heading a {
+    text-decoration: none;
+    margin: 0 .5rem;
+    color: #212529;
+    transition: ease-in-out .3s all;
+}
+
+.room-heading a:hover {
+    color: rgb(120, 111, 128);
+}
+
+.room-content,
+.room-info {
+    display: flex;
+}
+
+.jumbotron {
+    color: #fff;
+    border-radius: 0%;
+}
+
+.jumbotron h1 {
+    font-size: 480%;
+    padding-bottom: 20px;
+    color: white;
+    text-shadow: 0 2px 1px rgba(216, 214, 214, 0.82);
+}
+
+.container-fluid-room {
+    overflow: hidden;
+    width: 97%;
+}
+
+.card {
+    border: 0;
+}
+
+.card-room {
+    line-height: 2.5rem;
+    font-size: 130%;
+    padding-top: 15%;
+}
+
+.card-img-s {
+    height: 50vh;
+    width: 100%;
+}
+
+.room-modality {
+    padding: .8rem 0;
+}
+
+.room-content {
+    background: rgba(245, 245, 245, 0.37);
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.room-content a {
+    width: 31%;
+}
+
+.room-info {
+    flex-direction: column;
+}
+
+.room-img {
+    width: 100%;
+    height: 300px;
+}
+
+
+/* -------------------------------------------
+        form for services.json        
+----------------------------------------------------*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 auto;
+}
+
+span {
+    padding: .2rem 0;
+    color: #4e463b;
+    font-weight: 600;
+    margin-left: .4rem;
+}
+
+input {
+    padding: .8rem;
+}
+
+
+
+textarea {
+    padding: .2rem;
 }
 
 .footer {
-  padding-top: 20px;
-  text-align: center;
+    padding-top: 20px;
+    text-align: center;
 }
+
+.inner-bg {
+    background: linear-gradient(#020d0a75, #2e230e85), url(http://www.thedelamere.com/wp-content/uploads/2017/03/cerriedoubleroomdemo.jpg);
+    padding: 7% 30%;
+    margin-top: -10px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*------------------------------------------------------------------
+                  Invoice login
+-------------------------------------------------------------------------------------*/
+.login-page {
+    width: 80%;
+    margin: auto;
+    border-radius: 3px;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    margin: 0 auto 60px;
+    padding: 6rem .3rem;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+}
+
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    padding: 25px 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* .submit-invoice {
+  width: 80px;
+  margin: 0 auto;
+  padding: .2rem;
+  cursor: pointer;
+} */
+.form input[type=submit]{
+  width: 80px;
+  padding: 10px;
+  width: 150px;
+  background: #4d4d4d;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-form {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.form button:hover,
+.form button:active,
+.form button:focus {
+    background: #43A047;
+}
+
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.form .message a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.form .register-form {
+    display: none;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+/*--------------------------------------------------------------------
+            customerInvoice
+---------------------------------------------------------------------------------*/
+
+.row-contact-details {
+    justify-content: space-between;
+}
+
+.img-size {
+    width: 120px;
+    height: 140px;
+}
+
+
+/* .container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+} */
+
+.container .info {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.container .info h1 {
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 300;
+    color: #1a1a1a;
+}
+
+.container .info span {
+    color: #4d4d4d;
+    font-size: 12px;
+}
+
+.container .info span a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.container .info span .fa {
+    color: #EF3B3A;
+}
+
 
 /*
  * Extra utilities
  */
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
 }
 
-.flex-equal > * {
-  -ms-flex: 1;
-  -webkit-box-flex: 1;
-  flex: 1;
-}
-@media (min-width: 768px) {
-  .flex-md-equal > * {
+.flex-equal>* {
     -ms-flex: 1;
     -webkit-box-flex: 1;
     flex: 1;
-  }
+}
+
+@media (min-width: 768px) {
+    .flex-md-equal>* {
+        -ms-flex: 1;
+        -webkit-box-flex: 1;
+        flex: 1;
+    }
 }
 
 .overflow-hidden {
-  overflow: hidden;
+    overflow: hidden;
 }

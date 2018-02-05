@@ -8,3 +8,30 @@
   <div class="p-device box-shadow d-none d-md-block"></div>
   <div class="p-device p-device-2 box-shadow d-none d-md-block"></div>
 </div>
+
+<div class="room">
+  <h1 class="title">{{title}}</h1>
+  <div class="room-heading">
+    <a href="">Acommodation</a><span>|</span>
+    <a href="">Food & Drink</a><span>|</span>
+    <a href="">Spa</a>
+  </div>
+  <div class="room-content"> 
+    {{#each services}}
+      <a href="/room/{{id}}">
+        <div class="room-info">
+        <div>
+          <img src={{image}} class="room-img">
+        </div>
+        <div class="room-modality">
+          <p> {{[type of room] }} </p>
+          {{!-- <p> {{[description] }} </p>
+          <p> £ {{price}} per day.</p> --}}
+        </div>
+      </div>
+      </a>
+    {{/each}}
+  </div>
+
+</div>
+  

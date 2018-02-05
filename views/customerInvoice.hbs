@@ -1,0 +1,78 @@
+{{>jumbotron}}
+<div class="container">
+    <div class="row row-contact-details">
+        <div class="col-xs-6">
+            {{#each customer}}
+                <img src="{{image}}" class="rounded-circle img-size"> 
+            {{/each}}
+        </div>
+        <div class="col-xs-6 text-right">
+            <h1>INVOICE</h1>
+            <h4>
+                {{#each invoice}}
+                    <small>Ref: {{id}}</small>
+                {{/each}}
+            </h4>
+        </div>
+    </div>
+    <div class="row row-contact-details">
+        <div class="col-xs-5">
+            <div class="panel panel-default">
+            </div>
+        </div>
+        <div class="col-xs-5 col-xs-offset-2 text-right">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{#each customer}}
+
+                    <h4>To :
+                        <a href="#">{{title}} {{firstname}} {{surname}}</a>
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        {{postcode}}
+                        <br> {{email}}
+                        <br> more
+                        <br>
+                    </p>
+                </div>
+
+                    {{/each}}
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    <h4>Reservation reference</h4>
+                </th>
+                <th>
+                    <h4>Surcharge</h4>
+                </th>
+                <th>
+                    <h4>Total</h4>
+                </th>
+                <th>
+                    <h4>Balance due</h4>
+                </th>
+                <th>
+                    <h4>Date</h4>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {{#each invoice}}
+                <td>{{id}}</td>
+                <td>{{surcharges}}</td>
+                <td class="text-center">{{total}}</td>
+                {{!-- {{if balance}} --}}
+                <td class="text-center">{{balance}} </td>
+                <td class="text-center">{{invoiceDateTime}} </td> {{/each}}
+            </tr>
+        </tbody>
+    </table>
+</div>
