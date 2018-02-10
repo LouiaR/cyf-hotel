@@ -145,7 +145,7 @@ textarea {
 }
 
 .inner-bg {
-    background: linear-gradient(#020d0a75, #2e230e85), url(http://www.thedelamere.com/wp-content/uploads/2017/03/cerriedoubleroomdemo.jpg);
+    background: url(http://www.thedelamere.com/wp-content/uploads/2017/03/cerriedoubleroomdemo.jpg);
     padding: 7% 30%;
     margin-top: -10px;
     background-size: cover;
@@ -169,7 +169,7 @@ textarea {
     padding: 6rem .3rem;
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .form input {

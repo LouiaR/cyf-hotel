@@ -51,7 +51,7 @@ The below user stories are exercises which your team can choose to implement
 * As a _Hotel Manager_, I want to **view a customers details by their customer account ID**
 
 * As a _Hotel Manager_, I want to **view a list of all invoice**
-
+ 
 * As a _Hotel Manager_, I want to **view a an invoice by it's Invoice ID**
 
 * As a _Hotel Receptionist_, I want to **list of all reservations**

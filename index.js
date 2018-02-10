@@ -1,6 +1,7 @@
 const SERVER_PORT = process.env.PORT || 8080;
 const customers = require('./public/data/customers.json');
 const invoices = require('./public/data/invoices.json');
+const reservations = require('./public/data/reservations.json');
 const express = require("express");
 const exphbs = require("express-handlebars");
 const bodyparser = require("body-parser");
@@ -13,13 +14,6 @@ const routes = require('./routes');
 
 
 
-
-
-
-// var source = document.getElementById('room-template').html;
-// var template = Handlebars.compile(services);
-// var html = template(data);
-// document.getElementById('room-detail').html = html;
 
 const app = express();
 const router = express.Router();
@@ -36,9 +30,7 @@ app.set("view engine", "hbs");
 app.use(express.static("public"));
 app.use(express.static("assets"));
 app.use(formidable());
-app.use(bodyparser.json());
-// app.use(bodyparser.json()); // support json encoded bodies
-//  app.use(bodyparser.urlencoded({ extended: false })); // support encoded bodies
+app.use(bodyparser.json()); // support json encoded bodies
 
 app.use("/api", apiRouter);
 
@@ -49,12 +41,6 @@ app.use("/api", apiRouter);
 app.get("/", routes.home);
 app.get('/room/:id', routes.roomId);
 
-// app.post('/invoice/login', routes.login)
-// app.get('/invoice/login', routes.login);
-
-// app.get('/invoice/login', (req, res) => {
-//   res.render('invoiceForm');
-// })
 app.get('/login', routes.invoiceQuery);
 
 app.post('/invoice', routes.customerInvoice)

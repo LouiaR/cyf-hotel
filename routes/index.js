@@ -3,6 +3,7 @@ const fs = require('fs');
 const express = require("express");
 const invoices = require('../public/data/invoices.json');
 const customers = require('../public/data/customers.json');
+const reservations = require('../public/data/reservations.json');
 const bodyparser = require("body-parser");
 let formidable = require('express-formidable');
 
@@ -54,38 +55,31 @@ exports.createInfo = (req, res) => {
   }
 }
 
+var img = "https://www.crownhotels.com.au/d/crown-metropol-melbourne/media/images_Metropol/CM_FUNC_ROOM_STU_01.jpg";
 exports.invoiceQuery = (req, res) => {
-  var v = ( function( $ ) {
-    var images = [ "https://file.videopolis.com/D/27b0b61c-f48c-4c67-b694-a01a74bdeba9/8672.11699.melbourne.crown-metropol-melbourne.room.luxe-king-room-BRADffCs-13256-853x480.jpeg", "http://www.keioplaza.com/rooms/images/luxe_ph01.jpg", "https://www.crownhotels.com.au/d/crown-metropol-melbourne/media/images_Metropol/CM_FUNC_ROOM_STU_01.jpg" ];
-    var currentImage = 0;
-    function changeBackground() {
-        $( '.jumbotron ').css( { backgroundImage: 'url(' + images[ ++currentImage ] + ')' } );
-        if ( currentImage >= images.length - 1 ) {
-            currentImage -= images.length;
-        }
-    }
-    setInterval( changeBackground, 5000 );  
-});
   res.render('invoiceQuery', {
     title: 'Discover',
     image: img
   })
 }
-var img = "https://www.crownhotels.com.au/d/crown-metropol-melbourne/media/images_Metropol/CM_FUNC_ROOM_STU_01.jpg";
+
 exports.customerInvoice = (req, res) => {
-  const name = req.fields.email;
-  const customer = customers.filter(customer => customer.email === req.fields.email);
-  const invoice = invoices.filter(invoice => invoice.id === customer[0].id);
-  var balance = 0.00 ;
-  if(invoice[0].paid){
-     balance = 0.00
-  }else{
+  const input = req.fields.email;
+  const customer = customers.filter(customer => customer.email === input);
+  console.log(customer);
+  const reservation = reservations.filter(reservation => customer[0].id === reservation.customerId);
+  console.log(reservation);
+  const invoice = invoices.filter(invoice => invoice.reservationId === reservation[0].id);
+  console.log(invoice);
+  var balance = 0.00;
+  if (invoice[0].paid) {
+    balance = 0.00
+  } else {
     balance = 'You have not paid';
   }
   res.render('customerInvoice', {
     invoice: invoice,
-    customer:customer,
-    balance:balance,
-    title:'Discover'
+    customer: customer,
+    title: 'Discover'
   })
 }
